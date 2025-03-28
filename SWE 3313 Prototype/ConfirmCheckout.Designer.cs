@@ -66,7 +66,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 49);
+            label1.Location = new Point(58, 44);
             label1.Name = "label1";
             label1.Size = new Size(253, 15);
             label1.TabIndex = 28;
@@ -148,7 +148,7 @@
             button6.Name = "button6";
             button6.Size = new Size(95, 23);
             button6.TabIndex = 35;
-            button6.Text = "No thank you.";
+            button6.Text = "No, thank you.";
             button6.UseVisualStyleBackColor = true;
             // 
             // ConfirmCheckout
