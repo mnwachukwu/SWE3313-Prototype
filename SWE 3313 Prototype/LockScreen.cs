@@ -6,5 +6,10 @@ namespace SWE_3313_Prototype
         {
             InitializeComponent();
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            Program.NavigateToLogin();
+        }
     }
 }

@@ -199,7 +199,6 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Name = "NewInventoryOrder";
             Text = "New Order";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

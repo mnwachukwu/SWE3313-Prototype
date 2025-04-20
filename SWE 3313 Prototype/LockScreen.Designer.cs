@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            buttonLogin = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // buttonLogin
             // 
-            button1.Location = new Point(164, 135);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 49);
-            button1.TabIndex = 0;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
+            buttonLogin.Location = new Point(164, 135);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(171, 49);
+            buttonLogin.TabIndex = 0;
+            buttonLogin.Text = "Login";
+            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.Click += buttonLogin_Click;
             // 
             // label1
             // 
@@ -56,7 +57,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(523, 308);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(buttonLogin);
             Name = "LockScreen";
             Text = "Employee Login - v1.3.43.23098";
             ResumeLayout(false);
@@ -65,7 +66,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button buttonLogin;
         private Label label1;
     }
 }
