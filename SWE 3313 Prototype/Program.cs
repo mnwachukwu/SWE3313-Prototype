@@ -18,7 +18,7 @@ namespace SWE_3313_Prototype
         private static Form? currentForm;
 
         /// <summary>
-        /// The currently loged in employee.
+        /// The currently logged in employee.
         /// </summary>
         private static Employee? currentEmployee;
 
