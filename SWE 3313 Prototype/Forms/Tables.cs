@@ -1,26 +1,37 @@
 ﻿using SWE_3313_Prototype.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SWE_3313_Prototype
 {
+    /// <summary>
+    /// Tables form, which handles the view of all tables.
+    /// </summary>
     public partial class Tables : Form
     {
+        /// <summary>
+        /// The logged in employee.
+        /// </summary>
         private Employee employee;
 
+        /// <summary>
+        /// The employee's assigned section.
+        /// </summary>
         private int assignedSection;
 
+        /// <summary>
+        /// The list of buttons for the form that represent tables.
+        /// </summary>
         public List<Control> TableButtons { get; set; }
 
+        /// <summary>
+        /// The list of buttons that are grouped by section.
+        /// </summary>
         public List<Control>[] SectionButtons { get; set; }
 
+        /// <summary>
+        /// Ctor, sets up Tables form.
+        /// </summary>
+        /// <param name="loggedInEmployee"></param>
+        /// <param name="section"></param>
         internal Tables(Employee loggedInEmployee, int section)
         {
             InitializeComponent();
@@ -134,6 +145,11 @@ namespace SWE_3313_Prototype
             }
         }
 
+        /// <summary>
+        /// Updates the given button with the given table's information.
+        /// </summary>
+        /// <param name="button"></param>
+        /// <param name="table"></param>
         private void UpdateTableButton(Control button, Table table)
         {
             button.Text = $"{table.Name}{Environment.NewLine}" +
@@ -153,6 +169,11 @@ namespace SWE_3313_Prototype
             }
         }
 
+        /// <summary>
+        /// Tables button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, EventArgs e)
         {
             var control = (Control)sender;
@@ -163,6 +184,11 @@ namespace SWE_3313_Prototype
             UpdateTableButton(control, table);
         }
 
+        /// <summary>
+        /// Log out button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             Program.Logout();

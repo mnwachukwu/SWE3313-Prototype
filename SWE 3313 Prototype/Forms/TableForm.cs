@@ -2,10 +2,20 @@
 
 namespace SWE_3313_Prototype.Forms
 {
+    /// <summary>
+    /// Table form.
+    /// </summary>
     internal partial class TableForm : Form
     {
+        /// <summary>
+        /// The table.
+        /// </summary>
         private Table table;
 
+        /// <summary>
+        /// Ctor.
+        /// </summary>
+        /// <param name="table"></param>
         public TableForm(Table table)
         {
             InitializeComponent();
@@ -16,22 +26,42 @@ namespace SWE_3313_Prototype.Forms
             UpdateTab();
         }
 
+        /// <summary>
+        /// Logout button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             Program.Logout();
             Program.NavigateToLockScreen();
         }
 
+        /// <summary>
+        /// Back button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Set status button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSetStatus_Click(object sender, EventArgs e)
         {
             table.Status = (TableStatus)comboBoxStatus.SelectedIndex;
         }
 
+        /// <summary>
+        /// Close tab button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonCloseTab_Click(object sender, EventArgs e)
         {
             var orderSum = table.Order.Select(i => Program.Menu.FirstOrDefault(j => j.Id == i.MenuItemId)).Sum(i => i?.Price);
@@ -48,6 +78,11 @@ namespace SWE_3313_Prototype.Forms
             }
         }
 
+        /// <summary>
+        /// Add items button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAddItems_Click(object sender, EventArgs e)
         {
             var addItemForm = new AddItem(table.Order);
@@ -56,6 +91,9 @@ namespace SWE_3313_Prototype.Forms
             UpdateTab();
         }
 
+        /// <summary>
+        /// Updates the orders and tab amount based on items added to the order/sent to the kitchen.
+        /// </summary>
         private void UpdateTab()
         {
             listBoxOrderItems.Items.Clear();
@@ -82,6 +120,11 @@ namespace SWE_3313_Prototype.Forms
             labelTotal.Text = $"{sum:$0.00}";
         }
 
+        /// <summary>
+        /// Submit button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             table.SubmittedOrder.AddRange(table.Order);
@@ -90,6 +133,11 @@ namespace SWE_3313_Prototype.Forms
             UpdateTab();
         }
 
+        /// <summary>
+        /// Remove item from order button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonRemoveOrder_Click(object sender, EventArgs e)
         {
             if (listBoxOrderItems.SelectedIndex > -1)
@@ -99,6 +147,11 @@ namespace SWE_3313_Prototype.Forms
             UpdateTab();
         }
 
+        /// <summary>
+        /// Remove item from submitted order button click event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonRemoveSubmittedOrder_Click(object sender, EventArgs e)
         {
             if (listBoxSubmittedItems.SelectedIndex > -1)
