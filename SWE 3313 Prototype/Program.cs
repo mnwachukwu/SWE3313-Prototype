@@ -10,11 +10,15 @@ namespace SWE_3313_Prototype
 
         private static Employee? currentEmployee;
 
-        private static int assignedSection;
+        private static int assignedSection = -1;
+
+        private static Dictionary<Employee, int> employeeAssignedSections = new();
+
+        private static int nowServing = 0;
 
         public static List<Employee> Employees { get; set; } = new();
 
-        public static List<Order> Orders { get; set; } = new();
+        public static Queue<OrderItem> KitchenOrders { get; set; } = new();
 
         public static List<MenuItem> Menu { get; set; } = new();
 
@@ -49,12 +53,22 @@ namespace SWE_3313_Prototype
         public static void Login(Employee employee)
         {
             currentEmployee = employee;
-            assignedSection = rng.Next(0, 5);
+            
+            if (employeeAssignedSections.ContainsKey(employee))
+            {
+                assignedSection = employeeAssignedSections[employee];
+            }
+            else
+            {
+                assignedSection = rng.Next(0, 5);
+                employeeAssignedSections.Add(employee, assignedSection);
+            }
         }
 
         public static void Logout()
         {
             currentEmployee = null;
+            assignedSection = -1;
         }
 
         public static void NavigateToLockScreen()
@@ -78,6 +92,26 @@ namespace SWE_3313_Prototype
                 currentForm?.Close();
                 currentForm = new Tables(currentEmployee, assignedSection);
                 currentForm.Show();
+            }
+        }
+
+        public static void SubmitToKitchenQueue(List<OrderItem> submittedItems)
+        {
+            nowServing++;
+            Console.WriteLine($"Order #{nowServing} received:");
+
+            foreach (var item in submittedItems)
+            {
+                var menuItem = Menu.FirstOrDefault(i => i.Id == item.MenuItemId);
+
+                KitchenOrders.Enqueue(item);
+
+                Console.WriteLine($"- {menuItem.Name}");
+
+                if (!string.IsNullOrEmpty(item.SpecialRequests))
+                {
+                    Console.WriteLine($"    - Special request: {item.SpecialRequests}");
+                }
             }
         }
     }

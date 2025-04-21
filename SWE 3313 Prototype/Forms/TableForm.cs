@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace SWE_3313_Prototype.Forms
 {
@@ -21,6 +13,7 @@ namespace SWE_3313_Prototype.Forms
             this.table = table;
             labelName.Text = $"{table.Name}";
             comboBoxStatus.SelectedIndex = (int)table.Status;
+            UpdateTab();
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
@@ -72,14 +65,14 @@ namespace SWE_3313_Prototype.Forms
             {
                 var menuItem = Program.Menu.FirstOrDefault(i => i.Id == item.MenuItemId);
 
-                listBoxOrderItems.Items.Add($"{menuItem?.Name} ({menuItem?.Price})");
+                listBoxOrderItems.Items.Add($"{menuItem?.Name} ({menuItem?.Price:$0.00})");
             }
 
             foreach (var item in table.SubmittedOrder)
             {
                 var menuItem = Program.Menu.FirstOrDefault(i => i.Id == item.MenuItemId);
 
-                listBoxSubmittedItems.Items.Add($"{menuItem?.Name} ({menuItem?.Price})");
+                listBoxSubmittedItems.Items.Add($"{menuItem?.Name} ({menuItem?.Price:$0.00})");
             }
 
             var orderSum = table.Order.Select(i => Program.Menu.FirstOrDefault(j => j.Id == i.MenuItemId)).Sum(i => i?.Price);
@@ -92,6 +85,7 @@ namespace SWE_3313_Prototype.Forms
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             table.SubmittedOrder.AddRange(table.Order);
+            Program.SubmitToKitchenQueue(table.Order);
             table.Order.Clear();
             UpdateTab();
         }
