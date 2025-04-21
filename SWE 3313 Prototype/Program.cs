@@ -1,8 +1,16 @@
+using Newtonsoft.Json;
+
 namespace SWE_3313_Prototype
 {
     internal static class Program
     {
         private static Form currentForm;
+
+        public static List<Employee> Employees { get; set; } = new();
+
+        public static List<Order> Orders { get; set; } = new();
+
+        public static List<MenuItem> Menu { get; set; } = new();
 
         /// <summary>
         ///  The main entry point for the application.
@@ -10,10 +18,10 @@ namespace SWE_3313_Prototype
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+            Employees = JsonConvert.DeserializeObject<List<Employee>>(File.ReadAllText("Employees.json"));
+            Menu = JsonConvert.DeserializeObject<List<MenuItem>>(File.ReadAllText("MenuItems.json"));
             currentForm = new LockScreen();
             currentForm.Show();
             Application.Run();
@@ -22,6 +30,13 @@ namespace SWE_3313_Prototype
         public static void Exit()
         {
             Application.Exit();
+        }
+
+        public static void NavigateToLockScreen()
+        {
+            currentForm.Close();
+            currentForm = new Login();
+            currentForm.Show();
         }
 
         public static void NavigateToLogin()

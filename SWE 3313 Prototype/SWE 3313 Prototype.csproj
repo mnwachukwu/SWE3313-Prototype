@@ -10,7 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="EditSchedule.cs">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\EditSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">

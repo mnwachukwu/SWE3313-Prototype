@@ -1,0 +1,163 @@
+[
+    {
+      "Id": "A1",
+      "Name": "Mozzarella Sticks",
+      "Description": "Crispy fried mozzarella with marinara sauce",
+      "Price": 6.99,
+      "Cost": 2.50,
+      "Category": "Appetizer"
+    },
+    {
+      "Id": "A2",
+      "Name": "Bruschetta",
+      "Description": "Grilled bread topped with tomatoes, garlic, and basil",
+      "Price": 5.99,
+      "Cost": 2.00,
+      "Category": "Appetizer"
+    },
+    {
+      "Id": "A3",
+      "Name": "Stuffed Mushrooms",
+      "Description": "Mushrooms stuffed with cheese and herbs",
+      "Price": 7.49,
+      "Cost": 2.75,
+      "Category": "Appetizer"
+    },
+    {
+      "Id": "A4",
+      "Name": "Chicken Wings",
+      "Description": "Spicy buffalo wings with ranch dressing",
+      "Price": 8.99,
+      "Cost": 3.25,
+      "Category": "Appetizer"
+    },
+    {
+      "Id": "M1",
+      "Name": "Grilled Ribeye Steak",
+      "Description": "Juicy ribeye cooked to perfection",
+      "Price": 24.99,
+      "Cost": 10.00,
+      "Category": "MainCourse"
+    },
+    {
+      "Id": "M2",
+      "Name": "BBQ Ribs",
+      "Description": "Slow-cooked ribs in BBQ sauce",
+      "Price": 22.99,
+      "Cost": 9.50,
+      "Category": "MainCourse"
+    },
+    {
+      "Id": "M3",
+      "Name": "Roast Chicken",
+      "Description": "Herb-roasted chicken with garlic mashed potatoes",
+      "Price": 18.49,
+      "Cost": 7.25,
+      "Category": "MainCourse"
+    },
+    {
+      "Id": "M4",
+      "Name": "Salmon Fillet",
+      "Description": "Grilled salmon with lemon butter sauce",
+      "Price": 21.99,
+      "Cost": 9.00,
+      "Category": "MainCourse"
+    },
+    {
+      "Id": "V1",
+      "Name": "Vegetarian Lasagna",
+      "Description": "Layers of pasta, cheese, and vegetables",
+      "Price": 15.99,
+      "Cost": 6.00,
+      "Category": "Vegetarian"
+    },
+    {
+      "Id": "V2",
+      "Name": "Chickpea Curry",
+      "Description": "Spicy chickpea curry with rice",
+      "Price": 13.99,
+      "Cost": 4.50,
+      "Category": "Vegetarian"
+    },
+    {
+      "Id": "V3",
+      "Name": "Stuffed Bell Peppers",
+      "Description": "Bell peppers filled with quinoa and vegetables",
+      "Price": 14.49,
+      "Cost": 5.25,
+      "Category": "Vegetarian"
+    },
+    {
+      "Id": "V4",
+      "Name": "Mushroom Stroganoff",
+      "Description": "Creamy mushroom stroganoff over noodles",
+      "Price": 13.49,
+      "Cost": 4.75,
+      "Category": "Vegetarian"
+    },
+    {
+      "Id": "D1",
+      "Name": "Chocolate Lava Cake",
+      "Description": "Warm chocolate cake with molten center",
+      "Price": 6.49,
+      "Cost": 2.25,
+      "Category": "Desert"
+    },
+    {
+      "Id": "D2",
+      "Name": "Tiramisu",
+      "Description": "Classic Italian dessert with espresso and mascarpone",
+      "Price": 5.99,
+      "Cost": 2.00,
+      "Category": "Desert"
+    },
+    {
+      "Id": "D3",
+      "Name": "Cheesecake",
+      "Description": "Creamy New York-style cheesecake",
+      "Price": 6.25,
+      "Cost": 2.10,
+      "Category": "Desert"
+    },
+    {
+      "Id": "D4",
+      "Name": "Apple Pie",
+      "Description": "Warm apple pie with cinnamon",
+      "Price": 5.75,
+      "Cost": 1.95,
+      "Category": "Desert"
+    },
+    {
+      "Id": "DR1",
+      "Name": "Coca-Cola",
+      "Description": "12oz chilled can of classic Coke",
+      "Price": 1.99,
+      "Cost": 0.50,
+      "Category": "Drinks"
+    },
+    {
+      "Id": "DR2",
+      "Name": "Orange Juice",
+      "Description": "Freshly squeezed orange juice",
+      "Price": 2.99,
+      "Cost": 1.00,
+      "Category": "Drinks"
+    },
+    {
+      "Id": "DR3",
+      "Name": "Espresso",
+      "Description": "Rich Italian-style espresso shot",
+      "Price": 2.50,
+      "Cost": 0.75,
+      "Category": "Drinks"
+    },
+    {
+      "Id": "DR4",
+      "Name": "Iced Tea",
+      "Description": "Refreshing black iced tea",
+      "Price": 2.25,
+      "Cost": 0.70,
+      "Category": "Drinks"
+    }
+  ]
+  

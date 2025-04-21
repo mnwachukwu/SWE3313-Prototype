@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            textBoxEmployeeId = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            textBoxPin = new TextBox();
+            buttonLogin = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // textBoxEmployeeId
             // 
-            textBox1.Location = new Point(154, 92);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            textBoxEmployeeId.Location = new Point(154, 92);
+            textBoxEmployeeId.Name = "textBoxEmployeeId";
+            textBoxEmployeeId.Size = new Size(100, 23);
+            textBoxEmployeeId.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,22 +60,33 @@
             label2.TabIndex = 3;
             label2.Text = "Pin";
             // 
-            // textBox2
+            // textBoxPin
             // 
-            textBox2.Location = new Point(154, 130);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 2;
+            textBoxPin.Location = new Point(154, 130);
+            textBoxPin.Name = "textBoxPin";
+            textBoxPin.Size = new Size(100, 23);
+            textBoxPin.TabIndex = 2;
+            // 
+            // buttonLogin
+            // 
+            buttonLogin.Location = new Point(154, 203);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(75, 23);
+            buttonLogin.TabIndex = 4;
+            buttonLogin.Text = "Login";
+            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.Click += buttonLogin_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(391, 271);
+            Controls.Add(buttonLogin);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxPin);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxEmployeeId);
             Name = "Login";
             Text = "Login";
             ResumeLayout(false);
@@ -83,9 +95,10 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox textBoxEmployeeId;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox textBoxPin;
+        private Button buttonLogin;
     }
 }

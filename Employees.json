@@ -1,0 +1,53 @@
+[
+    {
+      "Id": 1000,
+      "Name": "Alice Johnson",
+      "Address": "101 Main St, Townsville",
+      "PhoneNumber": "(555) 111-2233",
+      "Manager": "N/A",
+      "Title": "Manager",
+      "Wage": 25.00,
+      "Pin": "0001"
+    },
+    {
+      "Id": 1002,
+      "Name": "Bob Martinez",
+      "Address": "202 Oak St, Townsville",
+      "PhoneNumber": "(555) 222-3344",
+      "Manager": "Alice Johnson",
+      "Title": "Waiter",
+      "Wage": 12.75,
+      "Pin": "0002"
+    },
+    {
+      "Id": 1003,
+      "Name": "Clara Nguyen",
+      "Address": "303 Pine St, Townsville",
+      "PhoneNumber": "(555) 333-4455",
+      "Manager": "Alice Johnson",
+      "Title": "Waiter",
+      "Wage": 13.00,
+      "Pin": "0003"
+    },
+    {
+      "Id": 1004,
+      "Name": "David Patel",
+      "Address": "404 Maple Ave, Townsville",
+      "PhoneNumber": "(555) 444-5566",
+      "Manager": "Alice Johnson",
+      "Title": "Waiter",
+      "Wage": 12.50,
+      "Pin": "0004"
+    },
+    {
+      "Id": 1005,
+      "Name": "Eva Smith",
+      "Address": "505 Birch Blvd, Townsville",
+      "PhoneNumber": "(555) 555-6677",
+      "Manager": "Alice Johnson",
+      "Title": "Waiter",
+      "Wage": 13.25,
+      "Pin": "0005"
+    }
+  ]
+  
