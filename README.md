@@ -1,4 +1,4 @@
-# SWE_3313_Prototype
+# SWE3313 Sprint 2
 We picked **Sprint 2A**
 
 The semester project to deliver the waiter component of an overall restaurant management system.
