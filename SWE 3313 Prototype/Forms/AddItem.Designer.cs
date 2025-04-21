@@ -1,4 +1,4 @@
-﻿namespace SWE_3313_Prototype
+﻿namespace SWE_3313_Prototype.Forms
 {
     partial class AddItem
     {
@@ -28,207 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            groupBox1 = new GroupBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox5 = new CheckBox();
-            textBox1 = new TextBox();
-            vScrollBar1 = new VScrollBar();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            label4 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            groupBox1.SuspendLayout();
+            buttonAppetizer = new Button();
+            buttonDrinks = new Button();
+            buttonMain = new Button();
+            buttonVegetarian = new Button();
+            buttonDessert = new Button();
+            panelItems = new Panel();
+            buttonItem4 = new Button();
+            buttonItem3 = new Button();
+            buttonItem2 = new Button();
+            buttonItem1 = new Button();
+            buttonBack = new Button();
+            buttonLogout = new Button();
+            panelItems.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // buttonAppetizer
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 35);
-            label1.Name = "label1";
-            label1.Size = new Size(34, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Item:";
+            buttonAppetizer.Location = new Point(52, 38);
+            buttonAppetizer.Name = "buttonAppetizer";
+            buttonAppetizer.Size = new Size(104, 48);
+            buttonAppetizer.TabIndex = 0;
+            buttonAppetizer.Text = "Appetizer";
+            buttonAppetizer.UseVisualStyleBackColor = true;
+            buttonAppetizer.Click += buttonAppetizer_Click;
             // 
-            // label2
+            // buttonDrinks
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(52, 35);
-            label2.Name = "label2";
-            label2.Size = new Size(100, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Foxy Coardboard";
+            buttonDrinks.Location = new Point(52, 118);
+            buttonDrinks.Name = "buttonDrinks";
+            buttonDrinks.Size = new Size(104, 48);
+            buttonDrinks.TabIndex = 1;
+            buttonDrinks.Text = "Drinks";
+            buttonDrinks.UseVisualStyleBackColor = true;
+            buttonDrinks.Click += buttonDrinks_Click;
             // 
-            // groupBox1
+            // buttonMain
             // 
-            groupBox1.Controls.Add(checkBox5);
-            groupBox1.Controls.Add(checkBox4);
-            groupBox1.Controls.Add(checkBox3);
-            groupBox1.Controls.Add(checkBox2);
-            groupBox1.Controls.Add(checkBox1);
-            groupBox1.Location = new Point(12, 66);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(290, 84);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Options";
+            buttonMain.Location = new Point(52, 198);
+            buttonMain.Name = "buttonMain";
+            buttonMain.Size = new Size(104, 48);
+            buttonMain.TabIndex = 2;
+            buttonMain.Text = "Main Course";
+            buttonMain.UseVisualStyleBackColor = true;
+            buttonMain.Click += buttonMain_Click;
             // 
-            // checkBox1
+            // buttonVegetarian
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(6, 22);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(72, 19);
-            checkBox1.TabIndex = 3;
-            checkBox1.Text = "Option 1";
-            checkBox1.UseVisualStyleBackColor = true;
+            buttonVegetarian.Location = new Point(52, 289);
+            buttonVegetarian.Name = "buttonVegetarian";
+            buttonVegetarian.Size = new Size(104, 48);
+            buttonVegetarian.TabIndex = 3;
+            buttonVegetarian.Text = "Vegetarian";
+            buttonVegetarian.UseVisualStyleBackColor = true;
+            buttonVegetarian.Click += buttonVegetarian_Click;
             // 
-            // checkBox2
+            // buttonDessert
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(84, 22);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(72, 19);
-            checkBox2.TabIndex = 4;
-            checkBox2.Text = "Option 2";
-            checkBox2.UseVisualStyleBackColor = true;
+            buttonDessert.Location = new Point(52, 381);
+            buttonDessert.Name = "buttonDessert";
+            buttonDessert.Size = new Size(104, 48);
+            buttonDessert.TabIndex = 4;
+            buttonDessert.Text = "Dessert";
+            buttonDessert.UseVisualStyleBackColor = true;
+            buttonDessert.Click += buttonDessert_Click;
             // 
-            // checkBox3
+            // panelItems
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Checked = true;
-            checkBox3.CheckState = CheckState.Checked;
-            checkBox3.Location = new Point(162, 22);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(72, 19);
-            checkBox3.TabIndex = 5;
-            checkBox3.Text = "Option 3";
-            checkBox3.UseVisualStyleBackColor = true;
+            panelItems.Controls.Add(buttonItem4);
+            panelItems.Controls.Add(buttonItem3);
+            panelItems.Controls.Add(buttonItem2);
+            panelItems.Controls.Add(buttonItem1);
+            panelItems.Location = new Point(239, 38);
+            panelItems.Name = "panelItems";
+            panelItems.Size = new Size(549, 391);
+            panelItems.TabIndex = 9;
+            panelItems.Visible = false;
             // 
-            // checkBox4
+            // buttonItem4
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(6, 47);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(72, 19);
-            checkBox4.TabIndex = 6;
-            checkBox4.Text = "Option 4";
-            checkBox4.UseVisualStyleBackColor = true;
+            buttonItem4.Location = new Point(286, 200);
+            buttonItem4.Name = "buttonItem4";
+            buttonItem4.Size = new Size(232, 126);
+            buttonItem4.TabIndex = 12;
+            buttonItem4.Text = "Item 4";
+            buttonItem4.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // buttonItem3
             // 
-            checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(84, 47);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(72, 19);
-            checkBox5.TabIndex = 7;
-            checkBox5.Text = "Option 5";
-            checkBox5.UseVisualStyleBackColor = true;
+            buttonItem3.Location = new Point(33, 200);
+            buttonItem3.Name = "buttonItem3";
+            buttonItem3.Size = new Size(232, 126);
+            buttonItem3.TabIndex = 11;
+            buttonItem3.Text = "Item 3";
+            buttonItem3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // buttonItem2
             // 
-            textBox1.Location = new Point(44, 264);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(38, 23);
-            textBox1.TabIndex = 3;
-            textBox1.Text = "1";
+            buttonItem2.Location = new Point(286, 54);
+            buttonItem2.Name = "buttonItem2";
+            buttonItem2.Size = new Size(232, 126);
+            buttonItem2.TabIndex = 10;
+            buttonItem2.Text = "Item 2";
+            buttonItem2.UseVisualStyleBackColor = true;
             // 
-            // vScrollBar1
+            // buttonItem1
             // 
-            vScrollBar1.Location = new Point(85, 251);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(26, 54);
-            vScrollBar1.TabIndex = 4;
+            buttonItem1.Location = new Point(33, 54);
+            buttonItem1.Name = "buttonItem1";
+            buttonItem1.Size = new Size(232, 126);
+            buttonItem1.TabIndex = 9;
+            buttonItem1.Text = "Item 1";
+            buttonItem1.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // buttonBack
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 267);
-            label3.Name = "label3";
-            label3.Size = new Size(26, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Qty";
+            buttonBack.Location = new Point(619, 481);
+            buttonBack.Name = "buttonBack";
+            buttonBack.Size = new Size(75, 23);
+            buttonBack.TabIndex = 10;
+            buttonBack.Text = "Back";
+            buttonBack.UseVisualStyleBackColor = true;
+            buttonBack.Click += buttonBack_Click;
             // 
-            // textBox2
+            // buttonLogout
             // 
-            textBox2.Location = new Point(85, 170);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(217, 54);
-            textBox2.TabIndex = 6;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Extra Notes";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(12, 344);
-            button1.Name = "button1";
-            button1.Size = new Size(93, 40);
-            button1.TabIndex = 8;
-            button1.Text = "Add to Order";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(131, 344);
-            button2.Name = "button2";
-            button2.Size = new Size(93, 40);
-            button2.TabIndex = 9;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
+            buttonLogout.Location = new Point(713, 481);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Size = new Size(75, 23);
+            buttonLogout.TabIndex = 11;
+            buttonLogout.Text = "Logout";
+            buttonLogout.UseVisualStyleBackColor = true;
+            buttonLogout.Click += buttonLogout_Click;
             // 
             // AddItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(327, 407);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label4);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(vScrollBar1);
-            Controls.Add(textBox1);
-            Controls.Add(groupBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            ClientSize = new Size(800, 516);
+            Controls.Add(buttonLogout);
+            Controls.Add(buttonBack);
+            Controls.Add(panelItems);
+            Controls.Add(buttonDessert);
+            Controls.Add(buttonVegetarian);
+            Controls.Add(buttonMain);
+            Controls.Add(buttonDrinks);
+            Controls.Add(buttonAppetizer);
             Name = "AddItem";
-            Text = "Add - Foxy Cardboard";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            Text = "AddItem";
+            panelItems.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private GroupBox groupBox1;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private TextBox textBox1;
-        private VScrollBar vScrollBar1;
-        private Label label3;
-        private TextBox textBox2;
-        private Label label4;
-        private Button button1;
-        private Button button2;
+        private Button buttonAppetizer;
+        private Button buttonDrinks;
+        private Button buttonMain;
+        private Button buttonVegetarian;
+        private Button buttonDessert;
+        private Panel panelItems;
+        private Button buttonItem4;
+        private Button buttonItem3;
+        private Button buttonItem2;
+        private Button buttonItem1;
+        private Button buttonBack;
+        private Button buttonLogout;
     }
 }

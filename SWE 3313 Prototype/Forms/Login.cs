@@ -11,7 +11,14 @@
         {
             if (IsAccountValid(textBoxEmployeeId.Text, textBoxPin.Text))
             {
+                var employee = Program.Employees.First(i => i.Id == textBoxEmployeeId.Text);
+
+                Program.Login(employee);
                 Program.NavigateToTables();
+            }
+            else
+            {
+                MessageBox.Show("Invalid login attempt.");
             }
         }
 

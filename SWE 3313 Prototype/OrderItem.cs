@@ -7,5 +7,10 @@
         public string MenuItemId { get; set; }
 
         public string SpecialRequests { get; set; }
+
+        public OrderItem()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
     }
 }

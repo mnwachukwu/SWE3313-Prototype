@@ -64,6 +64,7 @@
             // 
             textBoxPin.Location = new Point(154, 130);
             textBoxPin.Name = "textBoxPin";
+            textBoxPin.PasswordChar = '*';
             textBoxPin.Size = new Size(100, 23);
             textBoxPin.TabIndex = 2;
             // 

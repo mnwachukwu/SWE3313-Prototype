@@ -5,7 +5,7 @@
         Appetizer,
         MainCourse,
         Vegetarian,
-        Desert,
+        Dessert,
         Drinks
     }
 }
