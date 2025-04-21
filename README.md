@@ -18,6 +18,6 @@ First Waiter - ID: 1002, Pin: 0002
 ... and so on, all the way to ID 1005. You can see more about each employee in `Employees.json`.
 
 ### Contributors
-Matt Nwachukwu
-Naomi Washington
-Victory Osahon
+- Matt Nwachukwu
+- Naomi Washington
+- Victory Osahon
